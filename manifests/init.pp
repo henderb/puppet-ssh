@@ -11,7 +11,7 @@ class ssh {
         ensure  => present,
         type    => ssh-rsa,
         key     => file("/etc/puppet/rootkey"),
-        name    => root@brianjhenderson.com,
+        name    => "root@brianjhenderson.com",
         user    => root,
     }
 
