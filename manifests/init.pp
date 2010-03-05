@@ -3,7 +3,7 @@ class ssh {
 
     file { "sshdconfig":
         name    => "/etc/ssh/sshd_config",
-        content => template("sshd_config.erb"),
+        content => template("ssh/sshd_config.erb"),
         owner   => "root",
     }
 
