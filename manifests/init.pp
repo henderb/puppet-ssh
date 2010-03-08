@@ -7,13 +7,13 @@ class ssh {
         owner   => "root",
     }
 
-    ssh_authorized_key { "rootkey":
-        ensure  => present,
-        type    => ssh-rsa,
-        key     => file("/etc/puppet/rootkey"),
-        name    => "root@brianjhenderson.com",
-        user    => root,
-    }
+#    ssh_authorized_key { "rootkey":
+#        ensure  => present,
+#        type    => ssh-rsa,
+#        key     => file("/etc/puppet/files/authorized_keys/rootkey"),
+#        name    => "root@brianjhenderson.com",
+#        user    => root,
+#    }
 
     service { "ssh":
         require => Package[openssh-server],
